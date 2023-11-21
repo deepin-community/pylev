@@ -1,0 +1,4 @@
+version=4
+opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%v$1.tar.gz%" \
+   https://github.com/toastdriven/pylev/tags \
+   (?:.*?/)?v?(\d[\d.]*)\.tar\.gz debian uupdate
