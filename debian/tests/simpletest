@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e -u -x
+
+for py in $(py3versions -s); do
+    $py -c "import pylev; distance = pylev.levenshtein('kitten', 'sitting'); assert 3 == distance" 2>&1
+done
+
+

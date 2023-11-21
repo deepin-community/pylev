@@ -1,5 +1,36 @@
-template-repository (1.0-1) unstable; urgency=medium
+pylev (1.4.0-1) unstable; urgency=medium
 
-  * Initial release
+  [ Emmanuel Arias ]
+  * New upstream release (Closes: #1000440).
+  * d/control: Bump Standards-Version to 4.6.0.1. No changes needed.
+  * d/copyright: Update copyright year for debian/* files.
+  * d/salsa-ci-yml: Remove template comments from the file.
+  * d/tests: Run upstream's testsuite. Rename the old superficial test file
+    to simpletest.
+  * d/control: Build with pybuild's pyproject plugin. Add
+    pybuild-plugin-pyproject as Build Depends.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Jeroen Ploemen ]
+  * Control: remove trivial autopkgtest-pkg-python.
+  * Rules: remove override of dh_auto_test, replace with a simple
+    setting in debian/pybuild.testfiles.
+
+ -- Emmanuel Arias <eamanu@yaerobi.com>  Sat, 07 May 2022 14:31:06 +0000
+
+pylev (1.2.0-2) unstable; urgency=medium
+
+  * d/control: modify long descrption. Remove a off-putting
+    phrase (Closes:980725).
+  * d/control: set DPT as maintainer.
+    - Set me as uploaders.
+  * d/rules: fix override_dh_auto_test, use set -e before
+    run commands.
+  * d/tests/control: Depends on python3-all.
+
+ -- Emmanuel Arias <eamanu@yaerobi.com>  Mon, 01 Feb 2021 18:49:14 -0300
+
+pylev (1.2.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #977846).
+
+ -- Emmanuel Arias <eamanu@yaerobi.com>  Mon, 21 Dec 2020 12:19:10 -0300
